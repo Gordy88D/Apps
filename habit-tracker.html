@@ -166,14 +166,7 @@
   }
 
   let data = loadMonth(year, month);
-  if (data.habits.length === 0) {
-    data.habits = [
-      { id: 1, name: 'Morning coffee (home)', days: [], done: {} },
-      { id: 2, name: 'No Monster', days: [], done: {} },
-      { id: 3, name: 'Gym', days: [1,3,5], done: {} },
-    ];
-    saveMonth(year, month, data);
-  }
+
 
   function isScheduled(habit, y, m, d) {
     if (!habit.days || habit.days.length === 0) return true;
